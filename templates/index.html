@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Prediction</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #121212;
+            color: white;
+            text-align: center;
+            padding-top: 50px;
+        }
+        input {
+            padding: 8px;
+            margin: 5px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #00adb5;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📊 Sales Prediction</h1>
+
+    <form action="/predict" method="post">
+        <input type="number" step="any" name="tv" placeholder="TV Advertising" required><br>
+        <input type="number" step="any" name="radio" placeholder="Radio Advertising" required><br>
+        <input type="number" step="any" name="newspaper" placeholder="Newspaper Advertising" required><br><br>
+
+        <button type="submit">Predict Sales</button>
+    </form>
+
+    <h2>{{ prediction_text }}</h2>
+
+</body>
+</html>
